@@ -6,7 +6,7 @@ def move_file(command_line: str) -> None:
     if command[0] != "mv" or len(command) != 3:
         return
 
-    source_file, target = command[1], command[2].split("/")
+    source_file, target = command[1], command[2].split(os.sep)
     target_name = target[-1]
     target_path = ""
     target.pop(-1)
